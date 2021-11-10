@@ -1,0 +1,34 @@
+.navBar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: darkgray;
+    overflow: auto;
+    height: auto;
+
+    .leftLinks{
+        flex:1 1 200px;
+    }
+        
+    .link {
+        display: inline-block;
+        text-align: center;
+        padding: 14px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bolder;
+    }
+        
+    .link:hover {
+        border-bottom: 2px solid purple;
+    }
+        
+    .selected{
+        border-bottom: 2px solid purple;
+    }
+}
