@@ -2,6 +2,8 @@ import React from 'react'
 import SearchBar from '../components/SearchBar'
 import ItemTable from './ItemTable';
 
+import styles from '../styles/search.module.css'
+
 class SearchContainer extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +18,7 @@ class SearchContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.searchContainer}>
                 <SearchBar searchData={this.searchCallback} />
                 <ItemTable items={this.state.searchResults} />
             </div>

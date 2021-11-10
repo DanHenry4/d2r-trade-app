@@ -1,26 +1,27 @@
 import React from 'react'
 import RunePrice from '../components/RunePrice'
 
+import styles from '../styles/itemRow.module.css'
+
 class ItemRow extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        console.log(this.props.item.itemPrice);
         const runeList = [];
         for (const key in this.props.item.itemPrice) {
             runeList.push(<RunePrice runeType={key} amount={this.props.item.itemPrice[key]} />)
         }
 
         return (
-            <div className="itemRow">
-                <div className="itemSeller">{this.props.item.itemSeller.toString()}</div>
-                <div className="itemName">{this.props.item.itemName.toString()}</div>
-                <div className="itemPrice">
+            <div className={styles.itemRow}>
+                <div className={styles.itemSeller}>{this.props.item.itemSeller.toString()}</div>
+                <div className={styles.itemName}>{this.props.item.itemName.toString()}</div>
+                <div className={styles.itemPrice}>
                     {runeList}
                 </div>
-                <div className="itemComments">{this.props.item.itemComments.toString()}</div>
+                <div className={styles.itemComments}>{this.props.item.itemComments.toString()}</div>
             </div>
         )
     }

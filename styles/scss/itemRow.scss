@@ -1,0 +1,22 @@
+.itemRow {
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.itemSeller {
+    min-width: 10%;
+}
+
+.itemName {
+    min-width: 15%;
+}
+
+.itemPrice {
+    min-width: 10%;
+}
+
+.itemComments {
+    min-width: 10%;
+}

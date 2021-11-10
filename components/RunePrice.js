@@ -8,8 +8,8 @@ class RunePrice extends React.Component {
     render() {
         return (
             <div className="runePrice">
-                <div className="runeCount">{this.props.amount.toString()}x</div>
-                <div className="runeType">{this.props.runeType.toString()}</div>
+                <span className="runeCount">{this.props.amount.toString()}x </span>
+                <span className="runeType">{this.props.runeType.toString()}</span>
             </div>
         )
     }
