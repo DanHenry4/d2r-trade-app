@@ -20,17 +20,19 @@ class SearchBar extends React.Component {
         event.preventDefault();
 
         // for now, let's fill some dummy data into the state
-        this.props.searchData([
-            {id: 1, itemSeller: "thisguy1", itemName: "Harlequin Crest Shako", itemPrice: { um: 1 }, itemComments: "Ethereal"},
-            {id: 3, itemSeller: "thatguy", itemName: "Tyrael's Might Ancient Armor", itemPrice: { hr: 10 }, itemComments: ""},
-            {id: 55, itemSeller: "mephisto", itemName: "Windforce", itemPrice: { um: 1 }, itemComments: "Ethereal"},
-            {id: 7, itemSeller: "ball", itemName: "Harlequin Crest Shako", itemPrice: { um: 1, pul: 1 }, itemComments: "141 def"}
-        ]);
+        this.props.response({
+            itemName: this.state.value,
+            data: [
+                {id: 1, itemSeller: "thisguy1", itemName: "Harlequin Crest Shako", itemPrice: { um: 1 }, itemComments: "Ethereal"},
+                {id: 3, itemSeller: "thatguy", itemName: "Tyrael's Might Ancient Armor", itemPrice: { hr: 10 }, itemComments: ""},
+                {id: 55, itemSeller: "mephisto", itemName: "Windforce", itemPrice: { um: 1 }, itemComments: "Ethereal"},
+                {id: 7, itemSeller: "ball", itemName: "Harlequin Crest Shako", itemPrice: { um: 1, pul: 1 }, itemComments: "141 def"}
+        ]});
     }
 
     render() {
         return (
-            <form className="searchBar" onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <label>
                     Search:
                     <input type="text" value={this.state.value} onChange={this.handleChange} />

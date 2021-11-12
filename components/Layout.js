@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
+import styles from '../styles/layout.module.css'
 
 export default function Layout({children}) {
     return (
@@ -11,6 +15,10 @@ export default function Layout({children}) {
         </Head>
         <NavBar />
         <main>{children}</main>
+        <footer className={styles.footer}>
+            <div>for the &hearts; of the game.</div>
+            <a href="https://github.com/DanHenry4/d2r-trade-app"><FontAwesomeIcon icon={faGithub} /></a>
+        </footer>
         </>
     )
 }

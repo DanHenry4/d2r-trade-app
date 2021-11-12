@@ -15,13 +15,13 @@ class ItemRow extends React.Component {
         }
 
         return (
-            <div className={styles.itemRow}>
-                <div className={styles.itemSeller}>{this.props.item.itemSeller.toString()}</div>
-                <div className={styles.itemName}>{this.props.item.itemName.toString()}</div>
-                <div className={styles.itemPrice}>
+            <div className={styles.row}>
+                <div className={styles.seller}>{this.props.item.itemSeller.toString()}</div>
+                <div className={styles.name}>{this.props.item.itemName.toString()}</div>
+                <div className={styles.price}>
                     {runeList}
                 </div>
-                <div className={styles.itemComments}>{this.props.item.itemComments.toString()}</div>
+                <div className={styles.comments}>{this.props.item.itemComments.toString()}</div>
             </div>
         )
     }

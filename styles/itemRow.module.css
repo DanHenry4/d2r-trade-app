@@ -1,1 +1,1 @@
-.itemRow{max-width:95%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:left}.itemSeller{min-width:10%}.itemName{min-width:15%}.itemPrice{min-width:10%}.itemComments{min-width:10%}
+.row{border:1px solid red;display:-webkit-box;display:-ms-flexbox;display:flex;margin-bottom:15px}.seller{min-width:150px}.name{min-width:300px}.price{min-width:100px}.comments{min-width:300px}

@@ -1,5 +1,6 @@
 import React from 'react'
-import SearchBar from '../components/SearchBar'
+import SearchBar from './SearchBar'
+import ItemInfo from './ItemInfo';
 import ItemTable from './ItemTable';
 
 import styles from '../styles/search.module.css'
@@ -8,19 +9,27 @@ class SearchContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchResults: []
+            response: {
+                itemName: "",
+                data: []
+            }
         }
     }
 
-    searchCallback = (searchData) => {
-        this.setState({searchResults: searchData});
+    searchCallback = (data) => {
+        this.setState({response: data});
     }
 
     render() {
         return (
-            <div className={styles.searchContainer}>
-                <SearchBar searchData={this.searchCallback} />
-                <ItemTable items={this.state.searchResults} />
+            <div className={styles.container}>
+                <div className={styles.bar}>
+                    <SearchBar response={this.searchCallback} />
+                </div>
+                <div className={styles.content}>
+                    <ItemInfo className={styles.box} item={this.state.response.itemName} />
+                    <ItemTable className={styles.box} items={this.state.response.data} />
+                </div>
             </div>
         )
     }

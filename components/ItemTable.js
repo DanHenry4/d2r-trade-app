@@ -1,8 +1,6 @@
 import React from 'react'
 import ItemRow from './ItemRow'
 
-import styles from '../styles/itemTable.module.css'
-
 class ItemTable extends React.Component {
     constructor(props) {
         super(props);
@@ -15,7 +13,7 @@ class ItemTable extends React.Component {
         });
 
         return (
-            <div className={styles.itemTable}>
+            <div>
                 {itemList}
             </div>
         )

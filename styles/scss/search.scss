@@ -1,5 +1,26 @@
-.searchContainer {
+.container {
+    width: 95%;
+    display: block;
     margin: auto;
-    max-width: 95%;
+}
+
+.bar {
+    width: 100%;
     text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    flex-grow: 1;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        display: block;
+    }
 }
